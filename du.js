@@ -50,7 +50,7 @@
     </div>
   </div>
 </body>
-<style class="sys"></style>
+<!--<style class="sys"></style>-->
 `.trim();
  ;
 let style=(_width,_space,_color,_bgcolor,_bocolor,_padding)=>{
@@ -61,6 +61,12 @@ let style=(_width,_space,_color,_bgcolor,_bocolor,_padding)=>{
  ,bgcolor=_bgcolor||"black"
  ,bocolor=_bocolor||"#456"
  ,padding=_padding||"0"
+;
+ if(!sys){
+  sys=document.createElement('style')
+  sys.classList.add('sys');
+  document.body.appendChild(sys);
+ }
 sys.innerHTML=
 `
 body{
